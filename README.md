@@ -1,2 +1,2 @@
 # config-router
-configuração básica de roteador
+configuração de roteador
