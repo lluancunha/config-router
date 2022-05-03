@@ -1,0 +1,27 @@
+Configuraçao basica de roteador
+
+Enable
+    clock set 19:45:00 05 may 2022
+
+    configure terminal
+        hostname rt-01
+        service timestamps log datetime msec 
+        service timestamps debug msec
+        no ip domain-lookup
+        banner motd #AVISO acesso autorizado somente a funcionarios#
+        security passwords min-length 8
+        enable secret 123@senac
+        username senac password 123@senac
+        username tatuape secret 123@senac
+
+    line console 0
+        login local
+        logging synchronous
+        exec-timeout 5 30
+        end
+    write
+    disable
+    exit
+    
+
+
