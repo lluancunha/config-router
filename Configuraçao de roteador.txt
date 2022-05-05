@@ -45,6 +45,10 @@ Enable
         no shutdown
         end
         write
+        
+     backup
+        copy running-config tftp:
+        192.168.1.1 (server ip)
     
     testes
         show ip interface brief
